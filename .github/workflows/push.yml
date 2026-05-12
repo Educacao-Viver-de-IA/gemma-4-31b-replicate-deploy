@@ -14,9 +14,8 @@ permissions:
 
 jobs:
   push:
-    # Larger runner da org Educacao-Viver-de-IA: 4 vCPU / 16 GB RAM / 150 GB disco
-    # Necessário porque os pesos do Gemma 4 31B sozinhos ocupam ~62 GB.
-    runs-on: ubuntu-large
+    # Larger runner padrão GH (4-core 150GB disk). Custom "ubuntu-large" não engatava.
+    runs-on: ubuntu-latest-4-cores
     timeout-minutes: 180
 
     steps:
